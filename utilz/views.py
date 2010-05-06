@@ -25,6 +25,10 @@ def home(request):
     "Static page with links to all the city homes"
     return context_response(request, 'utilz/home.html', {}, tabs=['home'])
 
+def show_deal(request, city):
+    "The deal page"
+    return context_response(request, 'utilz/deal.html', {"hide_deal":True}, tabs=['home'])
+
 def city_home(request, city):
     " Landing page to site. Much more to come... "
     
