@@ -40,5 +40,5 @@ class PermissionUserMiddleware(object):
                 request.has_deal = False
         except:
             pass        
-        request.has_deal = True
+
         return None
