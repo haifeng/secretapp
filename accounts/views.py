@@ -96,7 +96,7 @@ def logout(request):
 
 
 
-def facebook_login(request):
+def facebook_done(request):
     """ Stops google causing errors """
     if 'HTTP_USER_AGENT' in request.META and 'Googlebot' in request.META['HTTP_USER_AGENT']:
         return HttpResponse('')
