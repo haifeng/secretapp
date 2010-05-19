@@ -1,0 +1,84 @@
+{% extends "layout/base.html" %}
+
+{% block pagemedia %}
+<!-- INLINE STYLES TO SECRETLONDON-IFY THE DEAL -->
+    <style type="text/css">
+      /* 
+
+      secretlondon pink : #ED1849
+      secretlondon pink variation: #E70F47
+
+      */
+		
+      #grpbuys-deal #deal-full-widget {
+        margin: 0 auto;
+      }
+
+      /* deal title */
+      #grpbuys-deal h1 {
+        color: #ED1849;
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      /* style all links */
+      #grpbuys-deal a {
+        color: #ED1849;
+        text-decoration:underline;
+      }
+
+      /* style the price */
+      #grpbuys-deal .deal-price {
+
+      }
+
+      #grpbuys-deal .deal-buyers-bar {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-style:inset;
+        border: 1px solid #ccc;
+        background: #eee-;
+        background: -moz-linear-gradient(-90deg, #eee, #ccc);
+        background: -webkit-gradient(linear, 0 top, 0 bottom, from(#eee), to(#ccc));  
+      }
+
+      /* set the colour of the purchase progress bar */
+      #grpbuys-deal .deal-buyers-bar-inner {
+        height: 100%;
+        background: #ED1849;
+        background: -moz-linear-gradient(-90deg, #ED1849, #F06081);
+        background: -webkit-gradient(linear, 0 top, 0 bottom, from(#ED1849), to(#F06081));
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+      }
+
+      /*this changes the colour of the buy button*/
+      #grpbuys-deal .deal-buy-button {
+        color: #fff;
+        border: 1px solid #ED1849;
+
+        background: #ED1849;
+        background: -moz-linear-gradient(-90deg, #ED1849, #F06081);
+        background: -webkit-gradient(linear, 0 top, 0 bottom, from(#ED1849), to(#F06081));
+
+        text-shadow: 1px 1px 1px #a35100;
+        text-decoration:none;
+
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+      }
+
+      #grpbuys-deal #deal-full-widget .deal-buy-button:hover {
+        text-decoration: none;
+        background: -moz-linear-gradient(-90deg, #E70F47, #F06081);
+        background: -webkit-gradient(linear, 0 top, 0 bottom, from(#E70F47), to(#F06081));
+      }
+      
+    </style>
+{% endblock %}
+
+{% block content %}
+	<div style="padding-top:10px">
+		<script type="text/javascript" src="http://www.grpbuys.com/ads/1/61733ff7.js?style=full"></script>
+	</div>
+{% endblock %}
