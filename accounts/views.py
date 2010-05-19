@@ -94,3 +94,16 @@ def logout(request):
     ulogout(request)
     return redirect_back(request)
 
+
+
+def facebook_login(request):
+    """ Stops google causing errors """
+    if 'HTTP_USER_AGENT' in request.META and 'Googlebot' in request.META['HTTP_USER_AGENT']:
+        return HttpResponse('')
+    else:
+        from socialauth.views import facebook_login_done
+        return facebook_login_done(request)
+
+
+
+
