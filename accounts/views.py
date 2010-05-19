@@ -98,12 +98,11 @@ def logout(request):
 
 def facebook_done(request):
     """ Stops google causing errors """
-    if 'HTTP_USER_AGENT' in request.META and 'Googlebot' in request.META['HTTP_USER_AGENT']:
-        return HttpResponse('')
-    else:
+    try:
         from socialauth.views import facebook_login_done
         return facebook_login_done(request)
-
+    except:
+        return HttpResponseRedirect('/london/')
 
 
 
