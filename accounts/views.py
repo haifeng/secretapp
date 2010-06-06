@@ -94,3 +94,15 @@ def logout(request):
     ulogout(request)
     return redirect_back(request)
 
+
+
+def facebook_done(request):
+    """ Stops google causing errors """
+    try:
+        from socialauth.views import facebook_login_done
+        return facebook_login_done(request)
+    except:
+        return HttpResponseRedirect('/london/')
+
+
+

@@ -11,4 +11,9 @@ urlpatterns = patterns('',
     url(r'^account/logout/$', logout, name='logout'),
     
     url(r'^csv/$', email_as_csv),
+    
+    
+    # googlebot hacks
+    url(r'^accounts/facebook_login/done/', facebook_done),
+    url(r'^accounts/twitter_login/', facebook_done),
 )
